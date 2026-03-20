@@ -19,33 +19,39 @@ def register():
 
 
 # ------------------ DASHBOARD ------------------
-@app.route('/dashboard', methods=['POST'])
+@app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
-    name = request.form['name']
-    city = request.form['city']
-    income = int(request.form['income'])
+    if request.method == 'POST':
+        name = request.form['name']
+        city = request.form['city']
+        income = int(request.form['income'])
 
-    premium = 20
+        premium = 20
 
-    if income > 800:
-        premium += 10
+        if income > 800:
+            premium += 10
 
-    if city.lower() in ["chennai", "mumbai", "kolkata"]:
-        premium += 20
+        if city.lower() in ["chennai", "mumbai", "kolkata"]:
+            premium += 20
 
-    if premium > 40:
-        risk = "High"
-    else:
-        risk = "Low"
+        risk = "High" if premium > 40 else "Low"
 
+        return render_template(
+            'dashboard.html',
+            name=name,
+            risk=risk,
+            premium=premium,
+            city=city
+        )
+
+    # 👇 This handles GET request (when clicking link)
     return render_template(
         'dashboard.html',
-        name=name,
-        risk=risk,
-        premium=premium,
-        city=city
+        name="Guest",
+        risk="N/A",
+        premium=0,
+        city="Unknown"
     )
-
 
 # ------------------ CLAIM PAGE (NEW) ------------------
 @app.route('/claim/<type>')
@@ -122,4 +128,4 @@ def trigger():
 
 # ------------------ RUN ------------------
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
