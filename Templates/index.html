@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gig Insurance</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body class="center-page">
+
+<div class="card">
+    <h1>🚀 Gig Worker Insurance</h1>
+    <p class="subtitle">Protect your income from unexpected disruptions</p>
+
+    <form action="/dashboard" method="POST">
+        <div class="input-group">
+            <input type="text" name="name" required>
+            <label>Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" name="city" required>
+            <label>City</label>
+        </div>
+
+        <div class="input-group">
+            <select name="work">
+                <option>Food Delivery</option>
+                <option>Grocery Delivery</option>
+                <option>E-commerce</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <input type="number" name="income" required>
+            <label>Daily Income (₹)</label>
+        </div>
+
+        <button type="submit">Get Weekly Plan →</button>
+    </form>
+</div>
+
+</body>
+</html>

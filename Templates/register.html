@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="center-page">
+
+  <div class="card">
+    <h1>📝 Register</h1>
+    <p class="subtitle">Enter your details</p>
+
+    <form action="/dashboard" method="POST">
+
+      <div class="input-group">
+        <label class="field">Name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="input-group">
+        <label class="field">City</label>
+        <input type="text" name="city" required>
+      </div>
+
+      <div class="input-group">
+        <label class="field">Daily Income (₹)</label>
+        <input type="number" name="income" required>
+      </div>
+
+      <button type="submit">Continue →</button>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

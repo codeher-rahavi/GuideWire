@@ -1,0 +1,188 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Center page (for login/register) */
+.center-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    padding: 35px 30px;
+    border-radius: 20px;
+    width: 380px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* Title + Subtitle */
+.card h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.85;
+}
+
+/* Input group (LEFT LABEL + RIGHT INPUT) */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Label (left side) */
+.field {
+    width: 40%;
+    text-align: left;
+    color: #eee;
+    font-size: 14px;
+}
+
+/* Input box */
+.input-group input {
+    width: 58%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ================= DASHBOARD ================= */
+
+/* Container */
+.dashboard-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* Header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    opacity: 0.8;
+}
+
+/* Cards layout */
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Card box */
+.card-box {
+    background: rgba(255,255,255,0.18);
+    padding: 20px;
+    border-radius: 15px;
+    width: 180px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card-box:hover {
+    transform: translateY(-6px);
+}
+
+/* Values */
+.value {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Status */
+.green {
+    color: lightgreen;
+}
+
+/* Action section */
+.action-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.buttons button {
+    width: 180px;
+    padding: 10px;
+}
+
+/* Result box */
+.result-card {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Chart */
+.chart-section {
+    margin-top: 40px;
+}
+
+canvas {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
